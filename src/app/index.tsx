@@ -1,16 +1,17 @@
-import React, { useState, memo } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-  TouchableOpacity,
-  ScrollView,
-  StatusBar,
-  Image,
-  ActivityIndicator,
-} from "react-native";
 import { Stack, useRouter } from "expo-router";
+import { memo, useState } from "react";
+import {
+    ActivityIndicator,
+    FlatList,
+    Image,
+    ScrollView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
+} from "react-native";
 import { LEGENDARY_ROSTER } from "../constants/roster";
 import { usePokemonFetch } from "../hooks/usePokemonFetch";
 
@@ -157,22 +158,34 @@ const PokemonListCard = memo(
 export default function Home() {
   const router = useRouter();
 
+  // --- STATE MANAGEMENT ---
   const [selectedRegion, setSelectedRegion] = useState("All");
   const [activeType, setActiveType] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
+  // --- DERIVED DATA ---
   const regions = ["All", ...new Set(LEGENDARY_ROSTER.map((p) => p.region))];
   const availableTypes = [
     ...new Set(LEGENDARY_ROSTER.map((p) => p.type || "Unknown")),
   ].sort();
 
+  // Filter roster by Region, Category, and live Search Input
   const filteredRoster = LEGENDARY_ROSTER.filter((pokemon) => {
     const matchesRegion =
       selectedRegion === "All" || pokemon.region === selectedRegion;
     const matchesType = activeType === null || pokemon.type === activeType;
-    return matchesRegion && matchesType;
+    const matchesSearch =
+      searchQuery.trim() === "" ||
+      pokemon.name.toLowerCase().includes(searchQuery.toLowerCase().trim());
+
+    return matchesRegion && matchesType && matchesSearch;
   }).sort((a, b) => a.generation - b.generation);
 
-  const showTypesGrid = activeType === null && selectedRegion === "All";
+  // Automatically show list view if user is typing a search query
+  const showTypesGrid =
+    activeType === null &&
+    selectedRegion === "All" &&
+    searchQuery.trim() === "";
 
   return (
     <View style={styles.container}>
@@ -181,6 +194,7 @@ export default function Home() {
 
       {/* --- TOP SHELL (Classic Pokédex Red Casing) --- */}
       <View style={styles.pokedexRedShell}>
+        {/* Hardware Header */}
         <View style={styles.customHeader}>
           <View style={styles.pokedexLightsRow}>
             <View style={styles.mainLensOuter}>
@@ -192,9 +206,32 @@ export default function Home() {
             <View style={[styles.miniLight, { backgroundColor: "#F0AD4E" }]} />
             <View style={[styles.miniLight, { backgroundColor: "#5CB85C" }]} />
           </View>
-          <Text style={styles.headerTitle}>Legendary Pokédex</Text>
+          <Text style={styles.headerTitle}>National Pokédex</Text>
         </View>
 
+        {/* Sleek Search Bar */}
+        <View style={styles.searchContainer}>
+          <Text style={styles.searchIcon}>🔍</Text>
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search Pokémon..."
+            placeholderTextColor="rgba(255, 255, 255, 0.6)"
+            value={searchQuery}
+            onChangeText={setSearchQuery}
+            autoCapitalize="none"
+            autoCorrect={false}
+          />
+          {searchQuery.length > 0 && (
+            <TouchableOpacity
+              onPress={() => setSearchQuery("")}
+              style={styles.clearButton}
+            >
+              <Text style={styles.clearText}>✕</Text>
+            </TouchableOpacity>
+          )}
+        </View>
+
+        {/* Region Filter Chips */}
         <View style={styles.controlsContainer}>
           <ScrollView
             horizontal
@@ -225,9 +262,10 @@ export default function Home() {
         </View>
       </View>
 
-      {/* --- BOTTOM SCREEN (Premium Modern White Display) --- */}
+      {/* --- BOTTOM SCREEN (Premium Pearl White Display) --- */}
       <View style={styles.pokedexScreen}>
         {showTypesGrid ? (
+          /* VIEW A: TYPE CATEGORY GRID */
           <FlatList
             data={availableTypes}
             keyExtractor={(item) => item}
@@ -256,9 +294,22 @@ export default function Home() {
             )}
           />
         ) : (
+          /* VIEW B: POKÉMON LIST */
           <View style={{ flex: 1 }}>
+            {/* Contextual Clear/Back Buttons */}
             <View style={styles.listHeaderRow}>
-              {activeType && (
+              {searchQuery.trim() !== "" && (
+                <TouchableOpacity
+                  onPress={() => setSearchQuery("")}
+                  style={styles.backCategoryButton}
+                >
+                  <Text style={styles.backCategoryText}>
+                    ✕ Clear Search "{searchQuery}"
+                  </Text>
+                </TouchableOpacity>
+              )}
+
+              {activeType && searchQuery.trim() === "" && (
                 <TouchableOpacity
                   onPress={() => setActiveType(null)}
                   style={styles.backCategoryButton}
@@ -269,14 +320,16 @@ export default function Home() {
                 </TouchableOpacity>
               )}
 
-              {!activeType && selectedRegion !== "All" && (
-                <TouchableOpacity
-                  onPress={() => setSelectedRegion("All")}
-                  style={styles.backCategoryButton}
-                >
-                  <Text style={styles.backCategoryText}>← Clear Region</Text>
-                </TouchableOpacity>
-              )}
+              {!activeType &&
+                selectedRegion !== "All" &&
+                searchQuery.trim() === "" && (
+                  <TouchableOpacity
+                    onPress={() => setSelectedRegion("All")}
+                    style={styles.backCategoryButton}
+                  >
+                    <Text style={styles.backCategoryText}>← Clear Region</Text>
+                  </TouchableOpacity>
+                )}
             </View>
 
             <FlatList
@@ -293,7 +346,9 @@ export default function Home() {
                 />
               )}
               ListEmptyComponent={
-                <Text style={styles.emptyText}>No Pokémon found.</Text>
+                <Text style={styles.emptyText}>
+                  No Pokémon found matching your search.
+                </Text>
               }
             />
           </View>
@@ -311,15 +366,15 @@ const styles = StyleSheet.create({
 
   pokedexRedShell: {
     backgroundColor: "#DC0A2D",
-    paddingBottom: 20,
+    paddingBottom: 16,
     zIndex: 10,
   },
 
-  customHeader: { paddingTop: 50, paddingHorizontal: 24, paddingBottom: 10 },
+  customHeader: { paddingTop: 50, paddingHorizontal: 24, paddingBottom: 6 },
   pokedexLightsRow: {
     flexDirection: "row",
     alignItems: "flex-start",
-    marginBottom: 16,
+    marginBottom: 12,
     gap: 8,
   },
   mainLensOuter: {
@@ -363,11 +418,45 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
 
-  controlsContainer: { height: 48, marginTop: 10 },
+  // Search Bar Styling
+  searchContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(0, 0, 0, 0.2)",
+    marginHorizontal: 24,
+    borderRadius: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    marginTop: 8,
+    marginBottom: 8,
+    borderWidth: 1,
+    borderColor: "rgba(255, 255, 255, 0.2)",
+  },
+  searchIcon: {
+    fontSize: 14,
+    marginRight: 10,
+    color: "#FFF",
+  },
+  searchInput: {
+    flex: 1,
+    color: "#FFF",
+    fontSize: 15,
+    fontWeight: "600",
+    paddingVertical: 0,
+  },
+  clearButton: { padding: 4 },
+  clearText: {
+    color: "rgba(255, 255, 255, 0.8)",
+    fontSize: 14,
+    fontWeight: "bold",
+  },
+
+  // Controls & Filters
+  controlsContainer: { height: 44, marginTop: 4 },
   regionScroll: { paddingHorizontal: 16 },
   filterChip: {
     paddingHorizontal: 22,
-    paddingVertical: 10,
+    paddingVertical: 8,
     backgroundColor: "#A3001C",
     borderRadius: 24,
     marginRight: 10,
@@ -387,10 +476,10 @@ const styles = StyleSheet.create({
   },
   filterTextActive: { color: "#000", fontWeight: "900" },
 
-  // Premium Clean White Screen Background
+  // Premium Pearl White Screen
   pokedexScreen: {
     flex: 1,
-    backgroundColor: "#F9FAFB", // Premium soft white background replacing the dark mode black
+    backgroundColor: "#F9FAFB",
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     paddingTop: 24,
@@ -451,7 +540,7 @@ const styles = StyleSheet.create({
   backCategoryButton: { paddingVertical: 4 },
   backCategoryText: { color: "#1F2937", fontSize: 16, fontWeight: "700" },
 
-  // Clean White List Cards with Subtle Shadows
+  // List Cards
   listCard: {
     backgroundColor: "#FFFFFF",
     marginHorizontal: 8,
