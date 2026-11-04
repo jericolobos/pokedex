@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import { Stack, useLocalSearchParams, useRouter } from "expo-router";
+import { useState } from "react";
 import {
-  View,
-  Text,
-  Image,
-  ActivityIndicator,
-  ScrollView,
-  TouchableOpacity,
-  StyleSheet,
+    ActivityIndicator,
+    Image,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from "react-native";
-import { useLocalSearchParams, Stack, useRouter } from "expo-router";
-import { usePokemonFetch } from "../hooks/usePokemonFetch";
 import EvolutionChain from "../components/EvolutionChain";
+import { usePokemonFetch } from "../hooks/usePokemonFetch";
 
 // ============================================================================
 // 1. CONSTANTS & MAPPINGS
@@ -207,16 +207,42 @@ const StatsTab = ({ stats, exp }: { stats: any[]; exp: number }) => (
   </View>
 );
 
-// Renders the first 15 moves as dark-mode badges
+// Renders the sleek vertical list of Move Cards
 const MovesTab = ({ moves }: { moves: any[] }) => {
-  const displayMoves = moves?.slice(0, 15) || [];
+  // Grab the first 20 moves to show a good variety
+  const displayMoves = moves?.slice(0, 20) || [];
+
   return (
-    <View style={styles.movesContainer}>
-      {displayMoves.map((m: any) => (
-        <View key={m.move.name} style={styles.moveBadge}>
-          <Text style={styles.moveText}>{m.move.name.replace("-", " ")}</Text>
-        </View>
-      ))}
+    <View style={styles.movesListContainer}>
+      {displayMoves.map((m: any) => {
+        // Extract how the Pokémon learns this move
+        const details = m.version_group_details?.[0];
+        const level = details?.level_learned_at;
+        const method = details?.move_learn_method?.name;
+
+        // Format the label so it looks clean
+        let methodLabel = "TM / HM / Tutor";
+        if (method === "level-up" && level > 0)
+          methodLabel = `Learned at Level ${level}`;
+        if (method === "level-up" && level === 0)
+          methodLabel = "Learned upon Evolution";
+
+        return (
+          <View key={m.move.name} style={styles.moveListCard}>
+            {/* Decorative icon to make the list pop */}
+            <View style={styles.moveIconPlaceholder}>
+              <Text style={styles.moveIconText}>✦</Text>
+            </View>
+
+            <View style={styles.moveInfo}>
+              <Text style={styles.moveName}>
+                {m.move.name.replace("-", " ")}
+              </Text>
+              <Text style={styles.moveMethod}>{methodLabel}</Text>
+            </View>
+          </View>
+        );
+      })}
     </View>
   );
 };
@@ -565,26 +591,53 @@ const styles = StyleSheet.create({
     textAlign: "right",
   },
 
-  // Moves Tab Styles
-  movesContainer: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    gap: 10,
-    justifyContent: "center",
+  // --- NEW MOVES TAB STYLES ---
+  movesListContainer: {
+    flexDirection: "column",
+    gap: 12,
+    marginTop: 10,
   },
-  moveBadge: {
+  moveListCard: {
+    flexDirection: "row",
+    alignItems: "center",
     backgroundColor: "#2A2A2A",
-    paddingHorizontal: 16,
-    paddingVertical: 10,
-    borderRadius: 12,
+    padding: 12,
+    borderRadius: 16,
     borderWidth: 1,
     borderColor: "#444",
   },
-  moveText: {
+  moveIconPlaceholder: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: "#333", // Dark inner circle
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 16,
+    borderWidth: 1,
+    borderColor: "#555",
+  },
+  moveIconText: {
+    color: "#888",
+    fontSize: 16,
+  },
+  moveInfo: {
+    flex: 1,
+    justifyContent: "center",
+  },
+  moveName: {
     color: "#fff",
-    fontSize: 13,
+    fontSize: 16,
+    fontWeight: "bold",
+    textTransform: "capitalize",
+    marginBottom: 4,
+    letterSpacing: 0.5,
+  },
+  moveMethod: {
+    color: "#aaa",
+    fontSize: 12,
     fontWeight: "600",
-    textTransform: "lowercase",
+    textTransform: "uppercase",
   },
 
   // Error/Loading States
