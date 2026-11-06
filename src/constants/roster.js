@@ -4325,5 +4325,533 @@ export const LEGENDARY_ROSTER = [
     "type": "Fire",
     "generation": 6,
     "region": "Kalos"
+  },
+  {
+    "name": "rowlet",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "dartrix",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "decidueye",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "litten",
+    "type": "Fire",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "torracat",
+    "type": "Fire",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "incineroar",
+    "type": "Fire",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "popplio",
+    "type": "Water",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "brionne",
+    "type": "Water",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "primarina",
+    "type": "Water",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "pikipek",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "trumbeak",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "toucannon",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "yungoos",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "gumshoos",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "grubbin",
+    "type": "Bug",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "charjabug",
+    "type": "Bug",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "vikavolt",
+    "type": "Bug",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "crabrawler",
+    "type": "Fighting",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "crabominable",
+    "type": "Fighting",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "oricorio-baile",
+    "type": "Fire",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "cutiefly",
+    "type": "Bug",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "ribombee",
+    "type": "Bug",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "rockruff",
+    "type": "Rock",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "lycanroc-midday",
+    "type": "Rock",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "wishiwashi-solo",
+    "type": "Water",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "mareanie",
+    "type": "Poison",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "toxapex",
+    "type": "Poison",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "mudbray",
+    "type": "Ground",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "mudsdale",
+    "type": "Ground",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "dewpider",
+    "type": "Water",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "araquanid",
+    "type": "Water",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "fomantis",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "lurantis",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "morelull",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "shiinotic",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "salandit",
+    "type": "Poison",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "salazzle",
+    "type": "Poison",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "stufful",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "bewear",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "bounsweet",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "steenee",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "tsareena",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "comfey",
+    "type": "Fairy",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "oranguru",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "passimian",
+    "type": "Fighting",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "wimpod",
+    "type": "Bug",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "golisopod",
+    "type": "Bug",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "sandygast",
+    "type": "Ghost",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "palossand",
+    "type": "Ghost",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "pyukumuku",
+    "type": "Water",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "type-null",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "silvally",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "minior-red-meteor",
+    "type": "Rock",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "komala",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "turtonator",
+    "type": "Fire",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "togedemaru",
+    "type": "Electric",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "mimikyu-disguised",
+    "type": "Ghost",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "bruxish",
+    "type": "Water",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "drampa",
+    "type": "Normal",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "dhelmise",
+    "type": "Ghost",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "jangmo-o",
+    "type": "Dragon",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "hakamo-o",
+    "type": "Dragon",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "kommo-o",
+    "type": "Dragon",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "tapu-koko",
+    "type": "Electric",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "tapu-lele",
+    "type": "Psychic",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "tapu-bulu",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "tapu-fini",
+    "type": "Water",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "cosmog",
+    "type": "Psychic",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "cosmoem",
+    "type": "Psychic",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "solgaleo",
+    "type": "Psychic",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "lunala",
+    "type": "Psychic",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "nihilego",
+    "type": "Rock",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "buzzwole",
+    "type": "Bug",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "pheromosa",
+    "type": "Bug",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "xurkitree",
+    "type": "Electric",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "celesteela",
+    "type": "Steel",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "kartana",
+    "type": "Grass",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "guzzlord",
+    "type": "Dark",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "necrozma",
+    "type": "Psychic",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "magearna",
+    "type": "Steel",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "marshadow",
+    "type": "Fighting",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "poipole",
+    "type": "Poison",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "naganadel",
+    "type": "Poison",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "stakataka",
+    "type": "Rock",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "blacephalon",
+    "type": "Fire",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "zeraora",
+    "type": "Electric",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "meltan",
+    "type": "Steel",
+    "generation": 7,
+    "region": "Alola"
+  },
+  {
+    "name": "melmetal",
+    "type": "Steel",
+    "generation": 7,
+    "region": "Alola"
   }
 ];

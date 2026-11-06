@@ -8,10 +8,11 @@ const GENERATIONS = [
   { gen: 4, limit: 107, offset: 386, region: "Sinnoh" },
   { gen: 5, limit: 156, offset: 493, region: "Unova" },
   { gen: 6, limit: 72, offset: 649, region: "Kalos" },
+  { gen: 7, limit: 88, offset: 721, region: "Alola" },
 ];
 
 async function build() {
-  console.log("Starting Pokédex fetch for Gen 1-6 (721 Pokémon)...");
+  console.log("Starting Pokédex fetch for Gen 1-7 (809 Pokémon)...");
   let roster = [];
 
   for (const g of GENERATIONS) {
@@ -27,7 +28,6 @@ async function build() {
         const detailRes = await fetch(p.url);
         const detail = await detailRes.json();
 
-        // Isolate the primary type to categorize them in the UI
         const type = detail.types[0].type.name;
 
         roster.push({
@@ -37,7 +37,6 @@ async function build() {
           region: g.region,
         });
 
-        // Prints a dot so you can see it working
         process.stdout.write(".");
       } catch (e) {
         console.error(`\nFailed to fetch ${p.name}`);
@@ -45,16 +44,14 @@ async function build() {
     }
   }
 
-  console.log("\n\nAll 721 Pokémon fetched successfully!");
+  console.log("\n\nAll 809 Pokémon fetched successfully!");
 
-  // Format the file contents
   const fileContent = `// Automatically generated National Pokédex\nexport const LEGENDARY_ROSTER = ${JSON.stringify(roster, null, 2)};\n`;
 
-  // Save directly into your constants folder
   const targetPath = path.join(__dirname, "src", "constants", "roster.js");
   fs.writeFileSync(targetPath, fileContent);
   console.log(
-    `\nSaved to ${targetPath}! Refresh Expo Go to see the National Pokédex!`,
+    `\nSaved to ${targetPath}! Refresh Expo Go to see the updated Pokédex!`,
   );
 }
 
