@@ -4853,5 +4853,539 @@ export const LEGENDARY_ROSTER = [
     "type": "Steel",
     "generation": 7,
     "region": "Alola"
+  },
+  {
+    "name": "grookey",
+    "type": "Grass",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "thwackey",
+    "type": "Grass",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "rillaboom",
+    "type": "Grass",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "scorbunny",
+    "type": "Fire",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "raboot",
+    "type": "Fire",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "cinderace",
+    "type": "Fire",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "sobble",
+    "type": "Water",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "drizzile",
+    "type": "Water",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "inteleon",
+    "type": "Water",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "skwovet",
+    "type": "Normal",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "greedent",
+    "type": "Normal",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "rookidee",
+    "type": "Flying",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "corvisquire",
+    "type": "Flying",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "corviknight",
+    "type": "Flying",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "blipbug",
+    "type": "Bug",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "dottler",
+    "type": "Bug",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "orbeetle",
+    "type": "Bug",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "nickit",
+    "type": "Dark",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "thievul",
+    "type": "Dark",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "gossifleur",
+    "type": "Grass",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "eldegoss",
+    "type": "Grass",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "wooloo",
+    "type": "Normal",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "dubwool",
+    "type": "Normal",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "chewtle",
+    "type": "Water",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "drednaw",
+    "type": "Water",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "yamper",
+    "type": "Electric",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "boltund",
+    "type": "Electric",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "rolycoly",
+    "type": "Rock",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "carkol",
+    "type": "Rock",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "coalossal",
+    "type": "Rock",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "applin",
+    "type": "Grass",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "flapple",
+    "type": "Grass",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "appletun",
+    "type": "Grass",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "silicobra",
+    "type": "Ground",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "sandaconda",
+    "type": "Ground",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "cramorant",
+    "type": "Flying",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "arrokuda",
+    "type": "Water",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "barraskewda",
+    "type": "Water",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "toxel",
+    "type": "Electric",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "toxtricity-amped",
+    "type": "Electric",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "sizzlipede",
+    "type": "Fire",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "centiskorch",
+    "type": "Fire",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "clobbopus",
+    "type": "Fighting",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "grapploct",
+    "type": "Fighting",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "sinistea",
+    "type": "Ghost",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "polteageist",
+    "type": "Ghost",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "hatenna",
+    "type": "Psychic",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "hattrem",
+    "type": "Psychic",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "hatterene",
+    "type": "Psychic",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "impidimp",
+    "type": "Dark",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "morgrem",
+    "type": "Dark",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "grimmsnarl",
+    "type": "Dark",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "obstagoon",
+    "type": "Dark",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "perrserker",
+    "type": "Steel",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "cursola",
+    "type": "Ghost",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "sirfetchd",
+    "type": "Fighting",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "mr-rime",
+    "type": "Ice",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "runerigus",
+    "type": "Ground",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "milcery",
+    "type": "Fairy",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "alcremie",
+    "type": "Fairy",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "falinks",
+    "type": "Fighting",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "pincurchin",
+    "type": "Electric",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "snom",
+    "type": "Ice",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "frosmoth",
+    "type": "Ice",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "stonjourner",
+    "type": "Rock",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "eiscue-ice",
+    "type": "Ice",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "indeedee-male",
+    "type": "Psychic",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "morpeko-full-belly",
+    "type": "Electric",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "cufant",
+    "type": "Steel",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "copperajah",
+    "type": "Steel",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "dracozolt",
+    "type": "Electric",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "arctozolt",
+    "type": "Electric",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "dracovish",
+    "type": "Water",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "arctovish",
+    "type": "Water",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "duraludon",
+    "type": "Steel",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "dreepy",
+    "type": "Dragon",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "drakloak",
+    "type": "Dragon",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "dragapult",
+    "type": "Dragon",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "zacian",
+    "type": "Fairy",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "zamazenta",
+    "type": "Fighting",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "eternatus",
+    "type": "Poison",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "kubfu",
+    "type": "Fighting",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "urshifu-single-strike",
+    "type": "Fighting",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "zarude",
+    "type": "Dark",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "regieleki",
+    "type": "Electric",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "regidrago",
+    "type": "Dragon",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "glastrier",
+    "type": "Ice",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "spectrier",
+    "type": "Ghost",
+    "generation": 8,
+    "region": "Galar"
+  },
+  {
+    "name": "calyrex",
+    "type": "Psychic",
+    "generation": 8,
+    "region": "Galar"
   }
 ];

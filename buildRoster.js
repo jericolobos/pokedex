@@ -9,10 +9,11 @@ const GENERATIONS = [
   { gen: 5, limit: 156, offset: 493, region: "Unova" },
   { gen: 6, limit: 72, offset: 649, region: "Kalos" },
   { gen: 7, limit: 88, offset: 721, region: "Alola" },
+  { gen: 8, limit: 89, offset: 809, region: "Galar" },
 ];
 
 async function build() {
-  console.log("Starting Pokédex fetch for Gen 1-7 (809 Pokémon)...");
+  console.log("Starting Pokédex fetch for Gen 1-8 (898 Pokémon)...");
   let roster = [];
 
   for (const g of GENERATIONS) {
@@ -44,7 +45,7 @@ async function build() {
     }
   }
 
-  console.log("\n\nAll 809 Pokémon fetched successfully!");
+  console.log("\n\nAll 898 Pokémon fetched successfully!");
 
   const fileContent = `// Automatically generated National Pokédex\nexport const LEGENDARY_ROSTER = ${JSON.stringify(roster, null, 2)};\n`;
 
